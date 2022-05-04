@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<head>
+   <title>Document</title>
+</head>
+<body>
+
+    <p class='teste' name="principal">Minha página</p>
+    
+    <p class="teste">Teste DOM</p>
+    
+    <div class="teste" id="div_id" name="teste_nome">
+
+        <input type="text" name="nome" id="nome">
+
+        <input type="button" value="Teste" id="btn_id" class="teste_btn" onclick="obterDado()">
+    
+    </div>
+
+</body>
+
+<!-- depois que fechar a tag <body> declarar o script-->
+<script>
+
+    function obterDado(){
+
+        //console.log("Botão clicado")
+
+        var dado = document.getElementById("nome").value
+        console.log(dado)
+
+    }
+
+
+    //método de obter elemento através do atributt "id"
+    var elemento = document.getElementById('div_id')
+    //console.log(elemento)
+
+    var elementos = document.getElementsByClassName("teste")
+    //console.log(elementos)
+
+    var elementos = document.getElementsByTagName("p")
+    //console.log(elementos)
+
+    var elemento = document.querySelector(".teste")
+    console.log(elemento.innerHTML)
+
+    var elementos = document.querySelectorAll(".teste")
+    console.log(elementos)
+
+
+</script>
+
+</html>

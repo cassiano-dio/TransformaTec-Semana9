@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<head>
+   <title>Calculadora</title>
+</head>
+<body>
+    <h2 class="titulo">Minha Calculadora DOM</h2>
+    <input type="number" name="n1" id="n1" placeholder="Primeiro número">
+    <input type="submit" value="+" id="btn_soma" onclick="soma()">
+    <input type="submit" value="-" id="btn_subtrair" onclick="subtrair()">
+    <input type="submit" value="*" id="btn_multiplica" onclick="multiplica()">
+    <input type="submit" value="/" id="btn_dividir" onclick="dividir()">
+
+    
+
+    <input type="number" name="n2" id="n2" placeholder="Segundo número" >
+    <p id="resultado">Resultado: </p>
+
+    <input type="submit" value="Limpar" id="limpar" onclick="limpar()">
+
+</body>
+
+<script>
+
+    function limpar(){
+        document.getElementById("n1").value = "";
+        document.getElementById("n2").value = "";
+    }
+
+
+    function soma(){
+
+        document.getElementById("resultado").innerHTML = "Resultado: "
+
+        var n1 = document.getElementById("n1").value;
+
+        n1 = Number(n1)
+
+        var n2 = document.getElementById("n2").value;
+
+        n2 = Number(n2)
+
+        var resultado = n1 + n2;
+
+        document.getElementById("resultado").innerHTML += resultado
+
+    }
+
+    function subtrair(){
+
+        document.getElementById("resultado").innerHTML = "Resultado: "
+        var n1 = document.getElementById("n1").value;
+
+        n1 = Number(n1)
+
+        var n2 = document.getElementById("n2").value;
+
+        n2 = Number(n2)
+
+        var resultado = n1 - n2;
+
+        document.getElementById("resultado").innerHTML += resultado
+
+    }
+
+    function multiplica(){
+
+        document.getElementById("resultado").innerHTML = "Resultado: ";
+
+        var n1 = document.getElementById("n1").value;
+
+        n1 = Number(n1)
+
+        var n2 = document.getElementById("n2").value;
+
+        n2 = Number(n2)
+
+        var resultado = n1 * n2;
+
+        document.getElementById("resultado").innerHTML += resultado
+
+    }
+
+    function dividir(){
+
+        document.getElementById("resultado").innerHTML = "Resultado: "
+
+        var n1 = document.getElementById("n1").value;
+
+        n1 = Number(n1)
+
+        var n2 = document.getElementById("n2").value;
+
+        n2 = Number(n2)
+
+        var resultado = n1 / n2;
+
+        document.getElementById("resultado").innerHTML += resultado
+
+    }
+
+</script>
+
+</html>

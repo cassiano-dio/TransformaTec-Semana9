@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste</title>
+</head>
+<body>
+    <div class="teste">
+        <input type="text" name="dado" id="dado">
+    </div>
+    <p id="teste"></p>
+    <div class="teste">
+        <label class="rotulo"></label>
+    </div>
+    <div class="enviar">
+        <input type="submit" id="btn" onclick="obterDado() " value="Btn">
+    </div>
+</body>
+<script>
+
+    var elemento = document.getElementById('dado')
+    console.log(elemento)
+
+    var elementos = document.getElementsByClassName('teste')
+    console.log(elementos)
+
+    var elementos = document.getElementsByTagName('input')
+    console.log(elementos)
+
+    var elemento = document.querySelector('.enviar')
+    console.log(elemento)
+
+    var elementos = document.querySelectorAll('#dado')
+    console.log(elementos)
+
+
+
+    function obterDado(){
+        var dado = document.getElementById('dado').value
+        console.log(dado)
+        var value = document.getElementById("btn").value
+        document.getElementById("teste").innerHTML = value + dado
+    }
+    
+</script>
+</html>

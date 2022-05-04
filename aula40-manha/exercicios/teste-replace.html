@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="main">
+        <h1 id="title">Olá mundo!</h1>
+        <p id="text">Mussum Ipsum cevadis num lembris du restis</p>
+    </div>
+
+    <button type="button" onclick="replace()">Substituir</button>
+
+    <script>
+
+        function replace(){
+
+            //obtendo o "nó" pai
+            var parent = document.getElementById("main");
+
+            //obtendo o parágrafo com texto antigo
+            var old_text = document.getElementById("text")
+
+            //criando um novo elemento de parágafo
+            var new_text = document.createElement("p");
+
+            //criando um novo texto para o parágrafo
+            var new_content = document.createTextNode("Mussum aprovis suco de cevadis")
+
+            //inserindo o texto criado ao elemento parágrafo
+            new_text.appendChild(new_content)
+
+            //substituindo o texto antigo pelo texto novo
+            parent.replaceChild(new_text,old_text)
+
+
+        }
+
+    </script>
+
+    
+</body>
+</html>

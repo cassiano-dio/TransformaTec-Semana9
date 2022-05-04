@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Minha página DOM</title>
+    </head>
+
+    <body>
+        <div class="header element" id="header">
+            <input type="submit" id="btn" value="Click me">
+        </div>
+        <div class="form element" id="form">
+            <input type="text" id="nome" class="input_form" value="Cassiano">
+        </div>
+        
+    </body>
+
+    <script>
+        var elemento = document.getElementById("header")
+
+        //console.log(elemento)
+        //tag#id.classe
+        //div#header.header
+
+        var dado = document.getElementById("nome").value
+
+        //console.log(dado)
+
+        //Cassiano
+
+        var classes = document.getElementsByClassName("element")
+        //console.log(classes)
+
+        var divs = document.getElementsByTagName('div')
+        //console.log(divs)
+
+        var elemento = document.querySelector(".element")
+        console.log(elemento)
+
+        var elemento = document.querySelectorAll(".element")
+
+        console.log(elemento)
+
+    </script>
+
+</html>

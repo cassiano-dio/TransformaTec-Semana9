@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <div id="main">
+
+        <h1 id="title">Olá mundo!</h1>
+        <p id="text">Mussum impsum cacildis cevadis trapalhoes</p>
+
+        <button type="button" onclick="remove()">Cacildis</button>
+        <button type="button" onclick="add()">Cacildis voltou</button>
+    </div>
+
+    <script>
+
+        function remove(){
+
+
+            var parent = document.getElementById("main")
+
+            var child = document.getElementById("text")
+
+            parent.removeChild(child)
+
+        }
+
+        function add(){
+
+            var parent = document.getElementById("main")
+
+            var newText = document.createElement("p");
+    
+            //inserindo texto no elemento p
+            newText.innerHTML = "Cacildis"
+
+            //inserindo o novo elemento dentro da div
+            document.body.appendChild(newText, parent);
+        }
+
+    </script>
+
+</body>
+</html>

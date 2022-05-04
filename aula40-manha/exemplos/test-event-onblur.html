@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    
+    <p>Informe seu nome</p>
+    <input type="text" id="nome" onblur="mudarCor()" onfocus="voltarCor()">
+
+    <script>
+
+        function mudarCor(){
+            
+            document.getElementById("nome").style.background = "cadetblue"
+            document.getElementById("nome").style.borderRadius = "5px"
+
+        }
+
+        function voltarCor(){
+            document.getElementById("nome").style.background = "white"
+            document.getElementById("nome").style.borderRadius = "5px"
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Teste OnBlur</title>
+</head>
+<body>
+
+    <p>Informe seu nome:</p>
+
+    <input type="text" id="name" 
+    onfocus="addFoco()" onblur="removeFoco()">
+    
+</body>
+
+<script>
+
+    var input = document.getElementById("name");
+
+    function addFoco(){
+
+        input.style.background = "white"
+
+    }
+
+    function removeFoco(){
+        
+        input.style.background = "coral"
+    }
+
+    
+
+</script>
+</html>

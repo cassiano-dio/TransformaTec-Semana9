@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <div id="main">
+    
+        <button id="btn">Click me</button>
+    </div>
+     
+    <script>
+    
+    
+    var btn  = document.getElementById("btn").addEventListener("click",function(){
+    
+        //criando um novo elemento "p"
+        var newText = document.createElement("p");
+    
+        //inserindo texto no elemento p
+        newText.innerHTML = "Nois"
+    
+        //obtendo a div onde o elemento será inserido
+        var currentDiv = document.getElementById("main");
+    
+        //inserindo o novo elemento dentro da div
+        document.body.appendChild(newText, currentDiv);
+    
+     })
+    </script>
+</body>
+</html>

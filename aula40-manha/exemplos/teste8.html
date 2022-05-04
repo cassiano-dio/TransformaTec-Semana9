@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Insert New Element at the Beginning</title>
+</head>
+<body>
+    <div id="main">
+	
+	</div>
+
+	<form action="" id="myform">
+		<input type="text" name="name" id="myname" placeholder="Informe seu nome">
+		<input type="submit" id="submit" value="Cadastrar">
+	</form>
+
+	<input type="text" id="name" placeholder="Nome">
+	
+	<button type="button" onclick="insertElement()">Insert Element</button>
+	<div id="footer"></div>
+	
+	<script>
+	function insertElement() {
+
+
+		var name = document.getElementById("name").value
+
+		if(name == ""){
+			var empty = document.createElement("p");
+			var content = document.createTextNode("Empty")
+			empty.append(content)
+
+			var currentDiv = document.getElementById("footer"); 
+			document.body.insertBefore(empty, currentDiv);
+
+
+		}
+
+
+	}
+
+	document.getElementById("myform").addEventListener("submit",register)
+	
+	function register() {
+
+		var name = document.getElementById("myname").value
+
+		if(name == ""){
+			var empty = document.createElement("p");
+			var content = document.createTextNode("Empty")
+			empty.append(content)
+
+			var currentDiv = document.getElementById("footer"); 
+			document.body.insertBefore(empty, currentDiv);
+
+
+		}
+
+
+}
+	</script>
+</body>
+</html>

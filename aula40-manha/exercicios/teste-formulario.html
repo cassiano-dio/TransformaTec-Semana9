@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <div id="titulo">Formulário</div>
+
+    <form action="" id="formulario">
+0
+        <input type="text" name="nome" id="nome" placeholder="Informe seu nome">
+        <input type="text" name="sobrenome" id="sobrenome" placeholder="Sobrenome">
+        <input type="email" name="email" id="email" placeholder="Email">
+        <input type="password" name="senha" id="senha" placeholder="Senha">
+        <input type="password" name="confirma_senha" id="confirma_senha" placeholder="Confirmar senha">
+        <input type="submit" name="enviar" id="enviar" value="Enviar">
+
+    </form>
+<!-- aviso de campos vazios aqui -->
+    <div id="rodape"></div>
+    <script>
+        document.getElementById("formulario").addEventListener("submit",registrar)
+        function registrar(){
+            //obtendo os valores dos campos
+            var nome = document.getElementById("nome").value
+            var sobrenome = document.getElementById("sobrenome").value
+            var email = document.getElementById("email").value
+            var senha = document.getElementById("senha").value
+            var confirma_senha = document.getElementById("confirma_senha").value
+            //verificando se há algum campo em branco
+            if(nome == "" || sobrenome == "" || email == "" || senha == "" || confirma_senha == ""){
+                //criando o elemento com a mensagem em caso de campo vazio
+                var vazio = document.createElement("p")
+                //inserindo o texto no elemento
+                vazio.innerHTML = "Há campos vazios"
+                //obtendo o elemento anterior
+                var rodape = document.getElementById("rodape")
+                //inserindo a mensagem antes do elemento anterior - rodapé
+                document.body.insertBefore(vazio,rodape)
+            }
+        }
+    </script>
+
+</body>
+</html>

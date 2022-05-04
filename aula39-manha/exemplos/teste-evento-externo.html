@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Document</title>
+</head>
+<body>
+  
+    <!-- Exemplo de evento inline -->
+    <h1 id="paragrafo" >Clique aqui!</h1>
+
+    <!-- Exemplo de evento externo com addEventListener -->
+    <h1 onclick="alert('Clicou'); this.innerHTML = 'Clicado foi 2'">Clique aqui 2!</h1>
+    
+</body>
+
+<script>
+    //Adicionando event listener ao elemento HTML
+    var paragrafo = document.getElementById("paragrafo").addEventListener("click",
+    function(){
+        alert("Olá mundo")
+        document.getElementById("paragrafo").innerHTML = "Clicado foi"
+    })
+</script>
+
+</html>

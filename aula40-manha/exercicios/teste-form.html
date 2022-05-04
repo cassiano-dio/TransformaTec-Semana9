@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="main">
+	
+	</div>
+
+    <div id="form">
+        <input type="text" id="name" placeholder="Nome">
+    </div>
+    
+	
+	<button type="button" onclick="insertElement()">Insert Element</button>
+	<div id="footer"></div>
+
+    <script>
+
+        function insertElement() {
+
+            var name = document.getElementById("name").value
+
+            if(name == ""){
+
+                var empty = document.createElement("p");
+                
+                var content = document.createTextNode("Campo vazio não permitido")
+
+                empty.append(content)
+
+                var footer = document.getElementById("name");
+
+                document.body.insertBefore(empty, footer);
+
+
+            }
+
+
+    }
+
+    </script>
+    
+</body>
+</html>

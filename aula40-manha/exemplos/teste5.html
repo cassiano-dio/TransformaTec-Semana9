@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html>
+
+<body style="text-align:center;">
+	<h1>Enter Your Name</h1>
+	
+	<input id="name" type="text">
+	<button type="button" onclick="EnterName()">Submit</button>
+	<p style="color:green"id="demo"></p>
+
+
+	<script>
+		function EnterName()
+		{
+			var x= document.getElementById("name").value;
+
+			document.getElementById("demo").innerHTML =
+				"Welcome "+ x ;
+		}
+	</script>
+</body>
+	
+</html>

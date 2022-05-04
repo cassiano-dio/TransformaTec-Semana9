@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+
+  <body>
+    <div id="box">Some text here</div>
+    <button id="btn">Button</button>
+
+    <script>
+        const btn = document.getElementById('btn');
+
+        btn.addEventListener('click', function onClick(event) {
+        const box = document.getElementById('box');
+
+        box.style.backgroundColor = 'coral';
+        box.style.fontSize = "36px"
+
+        // 👇️ optionally change text color
+        // box.style.color = 'white';
+        });
+    </script>
+  </body>
+</html>

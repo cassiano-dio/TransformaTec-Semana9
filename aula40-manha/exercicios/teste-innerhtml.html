@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">Clique aqui</button>
+    <p id="paragrafo"></p>
+</body>
+
+<script>
+
+    var btn = document.getElementById("btn").addEventListener('click',function(){
+        var paragrafo = document.getElementById("paragrafo");
+
+        var novo_paragrafo = document.createElement("p");
+
+        novo_paragrafo.innerHTML = "De boa?"
+
+        paragrafo.innerHTML = "Olá pessoal"
+    })
+
+</script>
+
+</html>

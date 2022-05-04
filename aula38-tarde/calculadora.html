@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <title>Document</title>
+    </head>
+    <body>
+
+        <div class="header">
+            <h3>Calculadora DOM</h3>
+        </div>
+
+        <div class="content">
+
+            <!-- declaração de elemento que recebe o número de entrada -->
+            <input type="number" name="n1" id="n1" class="input_number" placeholder="Número 1">
+
+            <!-- declaração dos botões que chamam funções de cálculo por meio de um evento onclick -->
+            <input type="button" value="+" id="sum" class="btn_calculate" onclick="sum()">
+
+            <input type="submit" value="-" id="minus" class="btn_calculate" onclick="minus()">
+
+            <input type="submit" value="*" id="times" class="btn_calculate" onclick="times()">
+
+            <input type="submit" value="/" id="divide" class="btn_calculate" onclick="divide()">
+
+            <!-- declaração de elemento que recebe o número de entrada -->
+            <input type="number" name="n2" id="n2" class="input_number" placeholder="Número 2">
+
+            <!-- botão de "limpar" -->
+            <input type="submit" id="reset" value="Limpar" onclick="reset()">
+
+            <!-- Apresenta o resultado no navegador -->
+            <p id="result" class="result">Resultado: </p>
+
+        </div>
+    </body>
+
+    <script src="./teste.js"></script>
+
+    <script>
+
+        //função de limpar campos
+        function reset(){
+
+            document.getElementById("n1").value = ""
+            
+            document.getElementById("n2").value = ""
+
+            document.getElementById("result").innerHTML = "Resultado: "
+
+        }
+
+        //funções de cálculo
+        function sum(){
+
+            document.getElementById("result").innerHTML = "Resultado: "
+
+            var n1 = document.getElementById("n1").value
+
+            var n2 = document.getElementById("n2").value
+
+            n1 = Number(n1)
+            n2 = Number(n2)
+
+            var result = n1 + n2;
+
+            document.getElementById("result").innerHTML += result
+
+            alert(result)
+
+        }
+
+        function minus(){
+
+            document.getElementById("result").innerHTML = "Resultado: "
+
+            var n1 = document.getElementById("n1").value
+
+            var n2 = document.getElementById("n2").value
+
+            n1 = Number(n1)
+            n2 = Number(n2)
+
+            var result = n1 - n2;
+
+            document.getElementById("result").innerHTML += result
+        }
+
+        function times(){
+
+            document.getElementById("result").innerHTML = "Resultado: "
+
+            var n1 = document.getElementById("n1").value
+
+            var n2 = document.getElementById("n2").value
+
+            n1 = Number(n1)
+            n2 = Number(n2)
+
+            var result = n1 * n2;
+
+            document.getElementById("result").innerHTML += result
+        }
+
+        function divide(){
+
+            document.getElementById("result").innerHTML = "Resultado: "
+
+            var n1 = document.getElementById("n1").value
+
+            var n2 = document.getElementById("n2").value
+
+            n1 = Number(n1)
+            n2 = Number(n2)
+
+            var result = n1 / n2;
+
+            document.getElementById("result").innerHTML += result
+        }
+
+    </script>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+
+    <p>Selecione uma marca de carro</p>
+
+    <select name="marcas" id="marcas" onchange="escolha()">
+        <option value="Ford">Ford</option>
+        <option value="Volkswagen">Volkswagen</option>
+        <option value="FIAT">FIAT</option>
+        <option value="Chevrolet">Chevrolet</option>
+    </select>
+
+    <p id="escolhido">Carro não selecionado</p>
+
+    <script>
+        function escolha(){
+            var carro = document.getElementById("marcas").value
+            document.getElementById("escolhido").innerHTML = "Carro selecionado: " + carro
+        }
+    </script>
+
+</body>
+</html>
